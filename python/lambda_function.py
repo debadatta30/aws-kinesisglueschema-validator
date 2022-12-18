@@ -6,11 +6,11 @@ import io
 import logging
 import os
 
-# Set up the logger
+# Set up the  logger
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-# Env variables from CFN
+# Env variables from  CFN 
 streamName = os.environ.get('streamName')
 schName = os.environ.get('schName')
 regName = os.environ.get('regName')
