@@ -1,5 +1,8 @@
 # aws-Kinesis-GlueSchema validator
-This code produces data to the Kinesis producer by using AWS Glue Schema using AVRO-encoding messages .The AVRO message will read a Glue Schema in AWS and validate the message before sending this to Kinesis Producer
+This code produces data to the Kinesis producer by using AWS Glue Schema using AVRO-encoding messages .The AVRO message will read a Glue Schema in AWS and validate the message before sending this to Kinesis Producer . The below diagram shows the flow sequnce of the data validation before producing the data to Kinesis Data Stream
+
+<img width="320" alt="image" src="https://github.com/debadatta30/aws-kinesisglueschema-validator/assets/136390466/d9c2baa9-96ae-4d59-a1fa-f8d528f52129">
+
 
 The code contains the cloudformation templates which will create the Kineis Data stream , Glue Registry , Glue Schema and a Lambda Function which uses the AVRO library to read the Glue Schema and validate the data before sending this to Kinesis Data Producer. 
 
