@@ -1,12 +1,12 @@
 # aws-Kinesis-GlueSchema validator
-This code produces data to the Kinesis producer by using AWS Glue Schema using AVRO-encoding messages .The AVRO message will read a Glue Schema in AWS and validate the message before sending this to Kinesis Producer . The below diagram shows the flow sequnce of the data validation before producing the data to Kinesis Data Stream
+This code produces data to the Amazon Kinesis producer by using AWS Glue Schema using AVRO-encoding messages .The AVRO message will use the Glue Schema to validate the message before sending this to Amazon Kinesis Producer . The below diagram shows the flow sequnce of the data validation before producing the data to Amazon Kinesis Data Stream
 
 <img width="320" alt="image" src="https://github.com/debadatta30/aws-kinesisglueschema-validator/assets/136390466/d9c2baa9-96ae-4d59-a1fa-f8d528f52129">
 
 
-The code contains the cloudformation templates which will create the Kineis Data stream , Glue Registry , Glue Schema and a Lambda Function which uses the AVRO library to read the Glue Schema and validate the data before sending this to Kinesis Data Producer. 
+The code contains the cloudformation templates which will create the Amazon Kineis Data stream , AWS Glue Registry , AWS Glue Schema and a AWS Lambda Function which uses the AVRO library to read theAWS Glue Schema and validate the data before sending this to Kinesis Data Producer. 
 
-The Lambda code is written in Python and the source code is available in the Python folder , this is pacakaged as a zip packagae with the dependency. The code uses boto3 and avro librray to read the schema and use the avro encoder to validate the data before publishing it to the Kinesis Producer. Python folder contain the Lambdacode in the file named lambda_function.py . If you cahnge the source code you can create the zip package ,  the directory is named python . Navigate to the Project directory 
+The AWS Lambda code is written in Python and the source code is available in the Python folder , this is pacakaged as a zip packagae with the dependency. The code uses boto3 and avro librray to read the schema and use the avro encoder to validate the data before publishing it to the Kinesis Producer. Python folder contain the Lambdacode in the file named lambda_function.py . If you cahnge the source code you can create the zip package ,  the directory is named python . Navigate to the Project directory 
   cd Python
 
 Create a new directory named package  install the avro dependency
